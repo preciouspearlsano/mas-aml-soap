@@ -1,0 +1,14 @@
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+          <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <typeAliases>
+        <typeAlias type="mas.aml.soap.model.Outbox" alias="outbox"/>
+    </typeAliases>
+    <mappers>
+        <mapper resource="mas/aml/soap/mapper/AmlSoapMapper.xml"/>
+    </mappers>
+</configuration>

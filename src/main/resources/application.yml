@@ -1,0 +1,11 @@
+
+server:
+  port: 6060
+  ssl:
+    enabled: false
+spring:
+  profiles:
+    active:
+    - dev
+mybatis:
+  config-location: classpath:mybatis-config.xml

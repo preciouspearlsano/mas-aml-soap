@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://mas/aml/soap/model" xmlns:tns="http://mas/aml/soap/model"
+	elementFormDefault="qualified">
+
+	<xsd:element name="getCustomerFormCommandRequest">
+		<xsd:complexType>
+			<xsd:annotation>
+				<xsd:documentation>
+	        <![CDATA[(author): Precious Pearl A. Sano <pr3_cious_15@yahoo.com>
+	getCustomerFormCommandRequest version : 1.0]]>
+				</xsd:documentation>
+			</xsd:annotation>
+
+			<xsd:sequence>
+
+				<xsd:element minOccurs="0" name="individualTag" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="firstNameEn" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="middleNameEn" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="lastNameEn" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="dateOfBirth" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="placeOfBirth" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="nationality" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="contactNo" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="gender" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="identificationType" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="identificationNo" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="resAddrRoom" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="resAddrFloor" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="resAddrBlock" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="resAddrLot" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="resAddrBuildingName" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="resAddrStreet" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="resAddrVillage" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="resAddrHousingProject" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="resAddrDistrict" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="resAddrCity" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="resAddrCountryCode" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="companyNameEn" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="companyType" type="xsd:string" />
+
+				<xsd:element minOccurs="0" name="companyTelNo" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="companyPrimaryContactNo" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="companyDateOfIncorporation" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="companyCertificationType" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="companyCertificationNo" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="companyRegistrationType" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="companyRegistrationNo" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="comAddrRoom" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="comAddrFloor" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="comAddrBlock" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="comAddrLot" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="comAddrBuildingName" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="comAddrStreet" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="comAddrVillage" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="comAddrHousingProject" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="comAddrDistrict" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="comAddrCity" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="comAddrCountryCode" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="countryCodeIncorporation" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="countryCodeOperation" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="authorizedSigners" type="xsd:string" />
+
+				<xsd:element minOccurs="0" name="legal" type="xsd:string" />
+
+				<xsd:element minOccurs="0" name="management" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="owner" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="regulatory" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="companySourceIncome" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="natureOfCompany" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="individualSourceIncome" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="natureOfIndividualSourceIncome" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="role" type="xsd:string" />
+				
+				<xsd:element minOccurs="0" name="clientId" type="xsd:string" />
+
+				<xsd:element minOccurs="0" name="clientAcctId" type="xsd:string" />
+
+				<xsd:element minOccurs="0" name="clientType" type="xsd:string" />
+
+			</xsd:sequence>
+
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="customerFormReply">
+		<xsd:complexType>
+			<xsd:annotation>
+				<xsd:documentation>
+	        <![CDATA[(author): Precious Pearl A. Sano <pr3_cious_15@yahoo.com>]]>
+				</xsd:documentation>
+			</xsd:annotation>
+
+			<xsd:sequence>
+
+				<xsd:element minOccurs="0" name="screeningResult"
+					type="tns:screeningResult" />
+
+			</xsd:sequence>
+
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:complexType name="screeningResult">
+		<xsd:annotation>
+			<xsd:documentation>
+        <![CDATA[(author): Precious Pearl A. Sano <pr3_cious_15@yahoo.com>]]>
+			</xsd:documentation>
+		</xsd:annotation>
+
+		<xsd:sequence>
+
+			<xsd:element minOccurs="0" name="customerNo"
+				type="xsd:string" />
+
+			<xsd:element minOccurs="0" name="hits" type="tns:hits" />
+
+			<xsd:element minOccurs="0" name="id" type="xsd:string" />
+
+			<xsd:element minOccurs="0" name="input" type="tns:input" />
+
+		</xsd:sequence>
+
+	</xsd:complexType>
+
+	<xsd:complexType name="hits">
+		<xsd:annotation>
+			<xsd:documentation>
+        <![CDATA[(author): Precious Pearl A. Sano <pr3_cious_15@yahoo.com>]]>
+			</xsd:documentation>
+		</xsd:annotation>
+
+		<xsd:sequence>
+
+			<xsd:element minOccurs="0" name="created"
+				type="xsd:dateTime" />
+
+			<xsd:element minOccurs="0" name="riskLevel"
+				type="xsd:string" />
+
+			<xsd:element minOccurs="0" name="score" type="xsd:double" />
+
+		</xsd:sequence>
+
+	</xsd:complexType>
+
+	<xsd:complexType name="input">
+		<xsd:annotation>
+			<xsd:documentation>
+        <![CDATA[(author): Precious Pearl A. Sano <pr3_cious_15@yahoo.com>]]>
+			</xsd:documentation>
+		</xsd:annotation>
+
+		<xsd:sequence>
+
+			<xsd:element minOccurs="0" name="entityType"
+				type="xsd:string" />
+
+			<xsd:element minOccurs="0" name="hitsTotal"
+				type="xsd:double" />
+
+			<xsd:element minOccurs="0" name="result"
+				type="xsd:string" />
+
+			<xsd:element minOccurs="0" name="status"
+				type="xsd:string" />
+
+		</xsd:sequence>
+
+	</xsd:complexType>
+
+
+
+
+	<xsd:complexType name="outbox">
+		<xsd:annotation>
+			<xsd:documentation>
+        <![CDATA[(author): Precious Pearl A. Sano <pr3_cious_15@yahoo.com>]]>
+			</xsd:documentation>
+		</xsd:annotation>
+
+		<xsd:sequence>
+
+			<xsd:element minOccurs="0" name="commandId"
+				type="xsd:string" />
+
+			<xsd:element minOccurs="0" name="commandPath"
+				type="xsd:string" />
+
+			<xsd:element minOccurs="0" name="creationDate"
+				type="xsd:string" />
+
+			<xsd:element minOccurs="0" name="data" type="xsd:string" />
+
+			<xsd:element minOccurs="0" name="eventType"
+				type="xsd:string" />
+
+			<xsd:element minOccurs="0" name="id" type="xsd:string" />
+
+			<xsd:element minOccurs="0" name="replyId"
+				type="xsd:string" />
+
+			<xsd:element minOccurs="0" name="replyPath"
+				type="xsd:string" />
+
+			<xsd:element minOccurs="0" name="requestId"
+				type="xsd:string" />
+
+		</xsd:sequence>
+
+	</xsd:complexType>
+
+	<xsd:element name="getRequestSuccessResponse">
+		<xsd:complexType>
+			<xsd:annotation>
+				<xsd:documentation>
+	        <![CDATA[(author): Precious Pearl A. Sano <pr3_cious_15@yahoo.com>]]>
+				</xsd:documentation>
+			</xsd:annotation>
+	
+			<xsd:sequence>
+	
+				<xsd:element minOccurs="0" name="commandId"
+					type="xsd:string" />
+	
+				<xsd:element name="success" type="xsd:boolean" />
+	
+			</xsd:sequence>
+	
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>

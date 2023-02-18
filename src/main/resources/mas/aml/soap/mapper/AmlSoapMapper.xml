@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mas.aml.soap.mapper.AmlSoapMapper">
+
+	<resultMap id="outbox" type="mas.aml.soap.model.Outbox">
+		<id column="SO_ID" property="id" jdbcType="VARCHAR" />
+		<result column="SO_EVENT_TYPE" property="eventType" jdbcType="VARCHAR" />
+		<result column="SO_COMMAND_ID" property="commandId" jdbcType="VARCHAR" />
+		<result column="SO_COMMAND_PATH" property="commandPath" jdbcType="VARCHAR" />
+		<result column="SO_DATA" property="data" jdbcType="VARCHAR" />
+		<result column="SO_REPLY_ID" property="replyId" jdbcType="VARCHAR" />
+		<result column="SO_REPLY_PATH" property="replyPath" jdbcType="VARCHAR" />
+		<result column="SO_REQUEST_ID" property="requestId" jdbcType="VARCHAR" />
+		<result column="SO_CREATION_DATE" property="creationDate" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	
+	<sql id="outboxColumns">
+		SO.ID AS SO_ID,
+		SO.EVENT_TYPE AS SO_EVENT_TYPE,
+		SO.COMMAND_ID AS SO_COMMAND_ID,
+		SO.COMMAND_PATH AS SO_COMMAND_PATH,
+		SO.DATA AS SO_DATA,
+		SO.REPLY_ID AS SO_REPLY_ID,
+		SO.REPLY_PATH AS SO_REPLY_PATH,
+		SO.REQUEST_ID AS SO_REQUEST_ID,
+		SO.CREATION_DATE AS SO_CREATION_DATE,
+	</sql>
+	
+
+	
+	<select id="getReplyByCommandId" resultMap="outbox">
+		SELECT 
+		  	<trim suffixOverrides=",">
+				  <include refid="outboxColumns" />
+			</trim>
+	  	FROM SYS_OUTBOX SO 
+	  	WHERE SO.COMMAND_ID = #{commandId,jdbcType=VARCHAR}
+	  	AND SO.EVENT_TYPE = 'rpy'
+	</select>
+	
+	
+
+	
+	<insert id="insertCommandAndReply" parameterType="mas.aml.soap.model.Outbox" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO SYS_OUTBOX (
+			ID,
+			EVENT_TYPE,
+			COMMAND_ID,
+			COMMAND_PATH,
+			DATA,
+			REPLY_ID,
+			REPLY_PATH,
+			REQUEST_ID,
+			CREATION_DATE
+		) VALUES (
+			#{id,jdbcType=VARCHAR},
+			#{eventType,jdbcType=VARCHAR},
+			#{commandId,jdbcType=VARCHAR},
+			#{commandPath,jdbcType=VARCHAR},
+			CAST(#{data,jdbcType=VARCHAR} AS BINARY),
+			#{replyId,jdbcType=VARCHAR},
+			#{replyPath,jdbcType=VARCHAR},
+			#{requestId,jdbcType=VARCHAR},
+			#{creationDate,jdbcType=VARCHAR}
+		)
+	</insert>
+	
+	
+	
+	
+</mapper>

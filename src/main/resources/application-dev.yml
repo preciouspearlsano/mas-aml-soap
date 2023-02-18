@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    name: DEV_AML
+    url: jdbc:mysql://localhost:3306/aml_dev
+    username: root
+    password: root
+  #h2:
+    #console:
+      #enabled: false
+      #path: /h2
+      #settings:
+        #trace: true
+        #web-allow-others: false
+  #jpa:
+    #database-platform: org.hibernate.dialect.MySQL8Dialect
+    #defer-datasource-initialization: true
+  #sql:
+    #init:
+      #schema-locations: classpath:sql/create_schema.sql
+      #mode: never #always
+      #platform: always
+      
